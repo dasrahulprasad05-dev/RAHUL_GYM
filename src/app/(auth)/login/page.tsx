@@ -143,22 +143,6 @@ export default function LoginPage() {
             </Button>
           </form>
 
-          {/* Demo credentials */}
-          <div className="mt-6 rounded-lg border border-white/5 bg-white/[0.02] p-3">
-            <p className="text-xs text-zinc-500 mb-2 font-medium">
-              Demo credentials:
-            </p>
-            <div className="space-y-1 text-xs text-zinc-600">
-              <p>
-                Admin: <span className="text-zinc-400">admin@gym.com</span> /{" "}
-                <span className="text-zinc-400">admin123</span>
-              </p>
-              <p>
-                Member: <span className="text-zinc-400">member@gym.com</span> /{" "}
-                <span className="text-zinc-400">user123</span>
-              </p>
-            </div>
-          </div>
 
           <p className="mt-6 text-center text-sm text-zinc-500">
             Don&apos;t have an account?{" "}

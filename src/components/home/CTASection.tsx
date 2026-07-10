@@ -31,21 +31,19 @@ export function CTASection() {
               </p>
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button
-                  asChild
                   size="lg"
                   className="h-13 bg-lime-400 px-10 text-base font-bold text-zinc-950 hover:bg-lime-300 shadow-xl shadow-lime-400/25"
+                  render={<Link href="/register" />}
                 >
-                  <Link href="/register">
-                    Get Started Free <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
+                  Get Started Free <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
                 <Button
-                  asChild
                   size="lg"
                   variant="outline"
                   className="h-13 border-zinc-600 px-8 text-base text-zinc-300"
+                  render={<Link href="/pricing" />}
                 >
-                  <Link href="/pricing">View Pricing</Link>
+                  View Pricing
                 </Button>
               </div>
             </div>

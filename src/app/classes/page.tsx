@@ -108,7 +108,6 @@ export default async function ClassesPage() {
 
                         {session ? (
                           <Button
-                            asChild
                             disabled={isFull || isBooked}
                             className={`w-full ${
                               isBooked 
@@ -117,14 +116,13 @@ export default async function ClassesPage() {
                                   ? "bg-red-500/10 text-red-500 hover:bg-red-500/10 border border-red-500/20"
                                   : "bg-lime-400 text-zinc-950 hover:bg-lime-300 shadow-lg shadow-lime-400/20 font-bold"
                             }`}
+                            render={<Link href={`/member`} />}
                           >
-                            <Link href={`/member`}>
-                              {isBooked ? "Already Booked" : isFull ? "Class Full" : "Book Class"}
-                            </Link>
+                            {isBooked ? "Already Booked" : isFull ? "Class Full" : "Book Class"}
                           </Button>
                         ) : (
-                          <Button asChild className="w-full bg-zinc-100 text-zinc-950 hover:bg-white font-bold">
-                            <Link href="/login">Sign in to Book</Link>
+                          <Button className="w-full bg-zinc-100 text-zinc-950 hover:bg-white font-bold" render={<Link href="/login" />}>
+                            Sign in to Book
                           </Button>
                         )}
                       </div>

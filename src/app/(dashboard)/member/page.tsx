@@ -33,8 +33,8 @@ export default async function MemberDashboardPage() {
             <CardTitle className="text-lg font-medium text-white">
               Upcoming Classes
             </CardTitle>
-            <Button asChild variant="ghost" size="sm" className="text-lime-400 hover:text-lime-300">
-              <Link href="/classes">Book More</Link>
+            <Button variant="ghost" size="sm" className="text-lime-400 hover:text-lime-300" render={<Link href="/classes" />}>
+              Book More
             </Button>
           </CardHeader>
           <CardContent>

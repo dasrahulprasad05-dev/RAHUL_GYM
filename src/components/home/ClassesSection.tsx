@@ -49,13 +49,11 @@ export function ClassesSection({ classes }: { classes: ClassWithDetails[] }) {
               </p>
             </div>
             <Button
-              asChild
               variant="outline"
               className="mt-4 sm:mt-0 border-zinc-700 text-zinc-300 hover:bg-white/5"
+              render={<Link href="/classes" />}
             >
-              <Link href="/classes">
-                View All <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              View All <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>
         </FadeIn>

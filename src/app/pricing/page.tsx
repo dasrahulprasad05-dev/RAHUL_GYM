@@ -112,14 +112,14 @@ export default function PricingPage() {
                     </div>
                     
                     <Button
-                      asChild
                       className={`w-full h-12 rounded-xl font-bold ${
                         plan.popular
                           ? "bg-lime-400 text-zinc-950 hover:bg-lime-300 shadow-lg shadow-lime-400/20"
                           : "bg-white/10 text-white hover:bg-white/20"
                       }`}
+                      render={<Link href="/register" />}
                     >
-                      <Link href="/register">Get Started</Link>
+                      Get Started
                     </Button>
                   </div>
                 </StaggerItem>

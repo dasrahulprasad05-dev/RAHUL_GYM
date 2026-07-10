@@ -72,11 +72,9 @@ export function Navbar() {
         <div className="hidden items-center gap-3 md:flex">
           {session ? (
             <>
-              <Button asChild variant="ghost" size="sm" className="text-zinc-300 gap-2">
-                <Link href={session.user.role === "ADMIN" ? "/admin" : "/member"}>
-                  <LayoutDashboard className="h-4 w-4" />
-                  Dashboard
-                </Link>
+              <Button variant="ghost" size="sm" className="text-zinc-300 gap-2" render={<Link href={session.user.role === "ADMIN" ? "/admin" : "/member"} />}>
+                <LayoutDashboard className="h-4 w-4" />
+                Dashboard
               </Button>
               <Button
                 variant="outline"
@@ -90,15 +88,15 @@ export function Navbar() {
             </>
           ) : (
             <>
-              <Button asChild variant="ghost" size="sm" className="text-zinc-300">
-                <Link href="/login">Log in</Link>
+              <Button variant="ghost" size="sm" className="text-zinc-300" render={<Link href="/login" />}>
+                Log in
               </Button>
               <Button
-                asChild
                 size="sm"
                 className="bg-lime-400 text-zinc-950 font-semibold hover:bg-lime-300 shadow-lg shadow-lime-400/20"
+                render={<Link href="/register" />}
               >
-                <Link href="/register">Join Now</Link>
+                Join Now
               </Button>
             </>
           )}

@@ -76,21 +76,19 @@ export function HeroSection() {
               className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
             >
               <Button
-                asChild
                 size="lg"
                 className="h-13 bg-lime-400 px-8 text-base font-bold text-zinc-950 hover:bg-lime-300 shadow-xl shadow-lime-400/25 transition-all hover:shadow-lime-400/40 hover:scale-105"
+                render={<Link href="/register" />}
               >
-                <Link href="/register">
-                  Start Free Trial <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+                Start Free Trial <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button
-                asChild
                 size="lg"
                 variant="outline"
                 className="h-13 border-zinc-700 px-8 text-base text-zinc-300 hover:bg-white/5 hover:border-zinc-500"
+                render={<Link href="/classes" />}
               >
-                <Link href="/classes">Browse Classes</Link>
+                Browse Classes
               </Button>
             </motion.div>
           </div>

@@ -159,11 +159,9 @@ async function main() {
   });
 
   // Create a membership for the member
-  await prisma.membership.upsert({
-    where: { id: "seed-membership-1" },
-    update: {},
-    create: {
-      id: "seed-membership-1",
+  await prisma.membership.deleteMany({});
+  await prisma.membership.create({
+    data: {
       userId: member.id,
       plan: "Pro",
       price: 49.99,

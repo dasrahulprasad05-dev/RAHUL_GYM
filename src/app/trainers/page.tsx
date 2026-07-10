@@ -4,7 +4,6 @@ import { PageTransition } from "@/components/animations/PageTransition";
 import { StaggerContainer, StaggerItem } from "@/components/animations/Stagger";
 import { prisma } from "@/lib/prisma";
 import Image from "next/image";
-import { Instagram, Twitter, Youtube } from "lucide-react";
 
 async function getTrainers() {
   return prisma.trainer.findMany({
@@ -68,15 +67,6 @@ export default async function TrainersPage() {
                         <div className="text-sm font-medium text-zinc-300">
                           <span className="text-white text-lg mr-1">{trainer.experience}</span>
                           Years Exp.
-                        </div>
-                        
-                        <div className="flex gap-3">
-                          <a href="#" className="text-zinc-500 hover:text-lime-400 transition-colors">
-                            <Instagram className="h-5 w-5" />
-                          </a>
-                          <a href="#" className="text-zinc-500 hover:text-lime-400 transition-colors">
-                            <Twitter className="h-5 w-5" />
-                          </a>
                         </div>
                       </div>
                     </div>
